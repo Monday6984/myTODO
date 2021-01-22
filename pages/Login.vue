@@ -3,7 +3,7 @@
     
     <form>
 
-      <h3>Please Register to Continue</h3>
+      <h3>Please Login to Continue</h3>
 
            
       <div class="form-group">
@@ -16,10 +16,6 @@
         <input  v-model="register.password" type="password" class="form-control" name="" id="" placeholder="">
       </div>
 
-        <div class="form-group">
-        <p><label for="">Retype Password</label></p>
-        <input v-model="register.retypePassword" type="password" class="form-control" name="" id="" placeholder="">
-      </div>
 
       <button type="submit" class="btn btn-primary">Login</button>
 
@@ -36,8 +32,7 @@ export default {
       register: {
         email: '',
         password: '',
-        retypePassword: '',
-        
+                
         }
       }
     }
