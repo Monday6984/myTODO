@@ -1,12 +1,11 @@
 <template>
   <div>
     
-    <form  method="POST" @submit.prevent="login">
+    <form method="POST" @submit.prevent="register">
 
-      <h3>Please Login to Continue</h3>
+      <h3>Please Register to Continue</h3>
 
       <Notification :message="error" v-if="error"/>
-
 
            
       <div class="form-group">
@@ -19,12 +18,20 @@
         <input  v-model="password" type="password" class="form-control" name="password" >
       </div>
 
-    <div class="btn">
-      <button type="submit" class="btn btn-primary">Login</button>
-    </div>
-    <router-link to="/Register">
-      Don't have an account? register
+        <div class="form-group">
+        <p><label for="">Retype Password</label></p>
+        <input v-model="retypePassword" type="password" class="form-control" name="password" >
+      </div>
+
+
+      <div class="btn">
+      <button type="submit" class="btn btn-primary">Register</button>
+      </div>
+
+      <router-link to="/Login">
+      Already have an account? Login
     </router-link>
+
       
     </form>
   </div>
@@ -42,52 +49,59 @@ export default {
     return {
       email: '',
       password: '',
+      retypePassword: '',
       error: null
     }
   },
 
-  methods: {
-    async login() {
+
+    methods: {
+        async register() {
       try {
-            console.log(this.email)
-        
+          console.log(this.email)
+          console.log(this.password)
+          
+        await this.$axios.post('http://api.uatdrive.com:1010/users/signup', {
+          email: this.email,
+          password: this.password,
+          retypePassword: this.retypePassword,
+        })
+
         await this.$auth.loginWith('local', {
           data: {
           email: this.email,
           password: this.password
-          }
-          })
-
-        .then ( () => { 
-        this.$router.push({ name: "Todos-My Todos" })
+          },
         })
+
+        this.$router.push({ name: "Login" })
       } catch (e) {
         this.error = e.response.data.message
       }
     }
   }
-}
+  }
+
 </script>
 
 <style scoped>
 form {
-  width: 30%;
-  min-width: 400px;
+  width: 400px;
   margin: 0 auto;
-  border: 1px solid green;
  }
 
 input {
-  width: 100%;
+  width: 400px;
   height: 30px;
+
   margin-top: -100px;
 }
 
 .btn {
-  width: 80%;
+  width: 200px;
   color: #fff;
-  margin: 0 auto;
-  margin-top: 10px;
+   margin: 0px auto;
+   margin-top: 10px;
  
 }
 
@@ -99,26 +113,14 @@ button {
 
 
 @media (max-width: 500px) {
-
-   
-    form {
+ 
+   form {
 
         width: 400px;
         margin: 0 auto;
-
-    }
-
-    button {
-        width: 200px;
-        margin: 0px;
-
-      
-
         
 
-
-}
-
+    }
 }
 
 </style>

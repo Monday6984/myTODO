@@ -29,6 +29,7 @@ export default {
   modules: [
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
+    '@nuxtjs/auth',
     // https://go.nuxtjs.dev/pwa
     '@nuxtjs/pwa',
   ],
@@ -45,4 +46,28 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
+
+  auth: {
+    strategies: {
+      local: {
+        token: {
+          property: 'token',
+          required: true,
+          type: ''
+        },
+        user: {
+          property: 'user',
+          // autoFetch: true
+        },
+        endpoints: {
+          
+          register: { url: 'http://api.uatdrive.com:1010/users/signup', method: 'post', propertyName: 'token' },
+          login: { url: 'http://api.uatdrive.com:1010/users/login', method: 'post' },
+          user: { url: 'http://api.uatdrive.com:1010/todos', method: 'get', propertyName: 'data' },
+          create: { url: 'http://api.uatdrive.com:1010/todos', method: 'post' },
+        }
+      }
+    }
+  }
+
 }

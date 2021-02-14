@@ -15,6 +15,11 @@
     </script>
 
 <style>
+
+* {
+    box-sizing: border-box;
+}
+
 html {
       -webkit-text-size-adjust: 100%;
       -webkit-font-smoothing: antialiased;
@@ -25,6 +30,14 @@ html {
       font-family: 'Open Sans', sans-serif;
       font-size: 16px;
       line-height: 1.5;
+     
     }
+
+    .container {
+      width: 90%;
+      max-width: 1000px;
+      margin: 0 auto;
+      
+}
     
 </style>
