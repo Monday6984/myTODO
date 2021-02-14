@@ -59,7 +59,7 @@ a {
   padding-left: 1em;
   color: white;
   text-decoration: none;
-  font-size: 1.5rem;
+  
  
 }
 
@@ -82,7 +82,7 @@ a {
 .brand {
       font-family: 'Montserrat', sans-serif;
       font-weight: 700;
-      font-size: 2rem;
+      font-size: 1.5rem;
       color: #f5f5f5;
       padding-left: 0;
       text-decoration: none;

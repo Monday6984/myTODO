@@ -28,4 +28,11 @@ export default {}
   margin-top: 200px;
   
 }
+
+@media (max-width: 675px) {
+  .home {
+    width: 80%;
+  }
+
+} 
 </style>

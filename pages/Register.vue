@@ -112,11 +112,11 @@ button {
 }
 
 
-@media (max-width: 500px) {
+@media (max-width: 675px) {
  
    form {
 
-        width: 400px;
+        width: 80%;
         margin: 0 auto;
         
 

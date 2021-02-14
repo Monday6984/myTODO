@@ -74,7 +74,7 @@ form {
   width: 30%;
   min-width: 400px;
   margin: 0 auto;
-  border: 1px solid green;
+  
  }
 
 input {
@@ -98,12 +98,12 @@ button {
 }
 
 
-@media (max-width: 500px) {
+@media (max-width: 675px) {
 
    
     form {
 
-        width: 400px;
+        width: 50%;
         margin: 0 auto;
 
     }
