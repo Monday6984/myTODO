@@ -26,6 +26,6 @@ export default {}
   max-width: 400px;
   margin: 0 auto;
   margin-top: 200px;
-  border: 1px solid green;
+  
 }
 </style>

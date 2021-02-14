@@ -51,7 +51,7 @@ header {
   background-color:  #720c23;
   padding: 2em 0;
   text-align: center;
-  border: 2px solid green;
+ 
 }
 
 a {
@@ -63,20 +63,13 @@ a {
  
 }
 
-.navbar-links {
-  border: 2px solid green;
- 
- 
-  
-  
-  
-}
+
 
 .container {
     width: 90%;
     max-width: 1000px;
     margin: 0 auto;
-    border: 1px solid yellow;
+    
 }
 
 .container-flex {
