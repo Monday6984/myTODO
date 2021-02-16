@@ -72,7 +72,7 @@ export default {
 <style scoped>
 form {
   width: 30%;
-  min-width: 400px;
+  
   margin: 0 auto;
   
  }
@@ -103,21 +103,19 @@ button {
    
     form {
 
-        width: 50%;
+        width: 80%;
         margin: 0 auto;
 
     }
 
-    button {
-        width: 200px;
-        margin: 0px;
+    
 
       
 
         
 
 
-}
+
 
 }
 

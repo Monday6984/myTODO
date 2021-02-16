@@ -61,7 +61,7 @@ export default {
           console.log(this.email)
           console.log(this.password)
           
-        await this.$axios.post('http://api.uatdrive.com:1010/users/signup', {
+        await this.$axios.post('https://api.uatdrive.com:1012/users/signup', {
           email: this.email,
           password: this.password,
           retypePassword: this.retypePassword,
@@ -86,12 +86,12 @@ export default {
 
 <style scoped>
 form {
-  width: 400px;
+  width: 40%;
   margin: 0 auto;
  }
 
 input {
-  width: 400px;
+  width: 100%;
   height: 30px;
 
   margin-top: -100px;
