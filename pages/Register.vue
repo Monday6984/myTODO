@@ -61,7 +61,7 @@ export default {
           console.log(this.email)
           console.log(this.password)
           
-        await this.$axios.post('https://api.uatdrive.com:1010/users/signup', {
+        await this.$axios.post('http://api.uatdrive.com:1010/users/signup', {
           email: this.email,
           password: this.password,
           retypePassword: this.retypePassword,

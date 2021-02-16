@@ -20,7 +20,7 @@
 
 async asyncData({ $axios, error }) {
   try {
-      const todo = await $axios.$get(`https://api.uatdrive.com:1010/todos`)
+      const todo = await $axios.$get(`http://api.uatdrive.com:1010/todos`)
       
       return  {data: todo.data} 
   } catch (e) {
