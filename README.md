@@ -8,7 +8,7 @@ The design was provided via Adobe XD, I developed it making sure it looked as cl
 ## Screenshots
 ![myTodo home screenshot](./images/my-todo.PNG)
 
-                                                ## [live Demo](reverent-goldwasser-9dca29.netlify.app)
+## [live Demo](https://reverent-goldwasser-9dca29.netlify.app)
 
 ## Build Setup
 
