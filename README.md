@@ -6,7 +6,7 @@ The purpose of the project is to create a todo app. The project is a todo app th
 The design was provided via Adobe XD, I developed it making sure it looked as close to the design as possible.
 
 ## Screenshots
-![myTodo home screenshot](./images/my-todo.PNG)
+![myTodo home screenshot](./assets/my-todo.PNG)
 
 ## [live Demo](https://reverent-goldwasser-9dca29.netlify.app)
 
